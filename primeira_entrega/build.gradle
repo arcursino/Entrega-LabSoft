@@ -1,0 +1,24 @@
+plugins {
+    
+    id 'java'
+    id 'war' 
+    id 'application'
+    id 'org.gretty' version '3.0.3'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies { 
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'    
+}
+
+application {    
+    mainClassName = 'controller.PrimeiroServlet'
+}
+
+
+gretty {
+    servletContainer = 'jetty9.3'
+}
