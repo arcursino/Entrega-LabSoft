@@ -24,4 +24,5 @@ gradle appRun
 Após rodar o appRun, colocar o seguinte endereço no Browser:
 http://localhost:8080/entregas/primeira_entrega
 
-## O vídeo com um exemplo do gradle funcionando pode ser visto no link do youtube[primeira_entrega](https://youtu.be/fRpAgMRXtmI)
+
+## O vídeo com um exemplo do build realizado com o gradle, pode ser visto no link do youtube: https://youtu.be/fRpAgMRXtmI
