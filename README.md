@@ -1,4 +1,4 @@
-## Entregas
+# Entregas
 
 Repositório oficial para as entregas de trabalhos da disciplina Laboratório de Engenharia de Software.
 
@@ -6,12 +6,12 @@ Repositório oficial para as entregas de trabalhos da disciplina Laboratório de
 Professor da Disciplina - Fabrício Galende
 
 
-## Guia dos exemplos:
+## Guia das Entregas:
 * primeira_entrega - Aplicação web simples com Java
 
 
 
-# Recomendações para o uso [primeira_entrega](https://github.com/arcursino/Entrega-LabSoft/tree/master/primeira_entrega):
+## Recomendações para o uso [primeira_entrega](https://github.com/arcursino/Entrega-LabSoft/tree/master/primeira_entrega):
 
 iniciar > CMD > primeira_entrega enter
 
@@ -24,4 +24,4 @@ gradle appRun
 Após rodar o appRun, colocar o seguinte endereço no Browser:
 http://localhost:8080/entregas/primeira_entrega
 
-
+## O vídeo com um exemplo do gradle funcionando pode ser visto no link do youtube[primeira_entrega](https://youtu.be/fRpAgMRXtmI)
