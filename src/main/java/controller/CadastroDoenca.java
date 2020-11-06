@@ -17,13 +17,16 @@ import model.doenca.DoencaDAOImpl;
 public class CadastroDoenca extends HttpServlet{
     @Override
     public void doGet (HttpServletRequest req, HttpServletResponse res) throws ServletException{
-        try {
-            req.setAttribute("doenca", new Doenca());
-            req.setAttribute("option", "criar");
-            req.getRequestDispatcher("/static/dado_doenca.jsp").forward(req, res);
+        req.setAttribute("doenca", new Doenca());
+        req.setAttribute("option", "criar");
+        try {            
+            req.getRequestDispatcher("static/dado_doenca.jsp").forward(req, res);
+            
         } catch (Exception e) {
-            System.out.println("Erro em 10 ou Servlet");
+            System.out.println("An exception was thrown");
+            System.out.println(e.toString());
         }
+        
     }
 
     @Override
@@ -57,7 +60,8 @@ public class CadastroDoenca extends HttpServlet{
                 req.getRequestDispatcher("/static/dado_doenca.jsp").forward(req, res);
             }
         } catch (Exception e) {
-            System.out.println("Erro em 10 ou Servlet");
+            System.out.println("An exception was thrown");
+            System.out.println(e.toString());
         }
     }
 

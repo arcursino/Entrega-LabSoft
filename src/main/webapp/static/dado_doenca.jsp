@@ -1,13 +1,12 @@
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<%@ page contentType = "text/html" pageEncoding = "UTF-8" %>
-<%@ page import = "java.util.*" %>
-<%@ page import = "server.model.doenca.Doenca" %>
+<%@page import="java.util.List" %>
+<%@ page import = "model.doenca.Doenca" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <html>
     <head>
         <meta charset = "UTF-8">
         <title>Dados da Doenças</title>
         <link rel = "icon" type = "image/x-icon" href = "assets/save.ico">
-        <link rel = "stylesheet" href = "styles/style.css">
         <link rel = "stylesheet" href = "styles/doenca.css">
     </head>
     <body>
@@ -44,7 +43,7 @@
                                     } catch (Exception e) {
                                         doenca = new Doenca();
                                     }
-                                    if ( doenca.getId() == null || doenca.getId().trim().equals("") ) {
+                                    if ( doenca.getId() == null || doenca.getId().equals("") ) {
                                         out.print("Id: <input type = 'text' name = 'id'/><br>");
                                         out.print("Nome: <input type = 'text' name = 'nome'/><br>");
                                         out.print("Sintomas: <input type = 'text' name = 'sintomas'/><br>");                                        
