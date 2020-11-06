@@ -8,12 +8,13 @@ Professor da Disciplina - Fabrício Galende
 
 ## Guia das Entregas:
 * primeira_entrega - Aplicação web simples com Java
+* segunda_entrega - Protótipo navegável com inserção de dados
 
 
 
-## Recomendações para o uso [primeira_entrega](https://github.com/arcursino/Entrega-LabSoft/tree/master/primeira_entrega):
+## Recomendações para o uso:
 
-iniciar > CMD > primeira_entrega enter
+iniciar > CMD > Entrega-LabSoft enter
 
 ```
 gradle build
@@ -22,7 +23,7 @@ gradle appRun
 ```
 
 Após rodar o appRun, colocar o seguinte endereço no Browser:
-http://localhost:8080/entregas/primeira_entrega
+http://localhost:8080/entregas/home
 
 
 ## O vídeo com um exemplo do build realizado com o gradle, pode ser visto no link do youtube: https://youtu.be/fRpAgMRXtmI
