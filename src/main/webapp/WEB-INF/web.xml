@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<web-app xmlns = "http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation = "http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version = "3.1"
+  metadata-complete = "true">
+
+    <description>
+      Sistema de Dado de Coletas e Visualização de dados epidemiológicos
+    </description>
+    <display-name>Sistema de Dado de Coletas e Visualização de dados epidemiológicos
+    </display-name>
+
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>controller.Home</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CadastroDoenca</servlet-name>
+        <servlet-class>controller.CadastroDoenca</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CadastroDoenca</servlet-name>
+        <url-pattern>/cadastrodoenca</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
