@@ -55,14 +55,18 @@ public class CadastroDoenca extends HttpServlet{
                 req.setAttribute("doencas", new DoencaDAOImpl().getDoencas());
                 req.getRequestDispatcher("/static/dado_doenca.jsp").forward(req, res);
             } else {
-                req.setAttribute("doenca", new Doenca());
+                String nomeDoenca = (String)req.getParameter("nome");
+                String sintomas = (String)req.getParameter("sintomas");
+                doenca.setNome(nomeDoenca);
+                doenca.setSintomas(sintomas);
+                Doenca saveDoenca = new DoencaDAOImpl().saveDoenca(doenca);
+                req.setAttribute("doenca", doenca);
                 req.setAttribute("option", "criar");
                 req.getRequestDispatcher("/static/dado_doenca.jsp").forward(req, res);
             }
         } catch (Exception e) {
-            System.out.println("An exception was thrown");
-            System.out.println(e.toString());
+            System.out.println("Erro em 10 ou Servlet");
+            System.out.println(e.getMessage());
         }
     }
-
 }
