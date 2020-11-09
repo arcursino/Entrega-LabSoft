@@ -4,9 +4,12 @@ build/
 .gradle/
 gradle/
 .nb-gradle/
-
+bin/
 
 #ignored extensions
 .exe
 .bin
 .class
+.classpath
+.project
+.settings/
