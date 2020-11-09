@@ -6,7 +6,7 @@
     <head>
         <meta charset = "UTF-8">
         <title>Dados da Doenças</title>
-        <link rel = "icon" type = "image/x-icon" href = "assets/save.ico">
+        <link rel = "icon" type = "image/x-icon" href = "assets/favicon.png">
         <link rel = "stylesheet" href = "styles/doenca.css">
     </head>
     <body>
@@ -15,10 +15,10 @@
             <div class = "hero is-full-screen">
                 <nav class = "tabs is-center">
                     <a href = "home">Home</a>
-                    <a href = "dadoEpidemiologico">Visualização dos dados Epidemiológicos</a>
-                    <a href = "visualizarDoenca">Visualizar Doença</a>
-                    <a href = "cadastroDoenca">Cadastro de dados da doença</a>
-                    <a href = "cadastroEpidemiologico"> Cadastro de dados epidemiológicos</a>
+                    <a href = "dadoepidemiologico">Visualização dos dados Epidemiológicos</a>
+                    <a href = "visualizardoenca">Visualizar Doença</a>
+                    <a href = "cadastrodoenca">Cadastro de dados da doença</a>
+                    <a href = "cadastroepidemiologico"> Cadastro de dados epidemiológicos</a>
                 </nav>
                 <div id = "doenca">
                     <div class = "row">
@@ -35,7 +35,7 @@
                                     }
                                 %>
                             </h3>
-                            <form action = "cadastro" method = "POST">
+                            <form action = "cadastrodoenca" method = "POST">
                                 <%
                                     Doenca doenca;
                                     try {

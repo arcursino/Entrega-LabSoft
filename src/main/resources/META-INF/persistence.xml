@@ -10,9 +10,9 @@
     <properties>
       <property name = "hibernate.dialect" value = "org.hibernate.dialect.MariaDB53Dialect" />
       <property name = "javax.persistence.jdbc.driver" value = "org.mariadb.jdbc.Driver" />
-      <property name = "javax.persistence.jdbc.url" value = "jdbc:mysql://localhost:3300/sistema" />
-      <property name = "javax.persistence.jdbc.user" value = "root" />
-      <property name = "javax.persistence.jdbc.password" value = "root" />
+      <property name = "javax.persistence.jdbc.url" value = "jdbc:mysql://localhost:3306/sistema" />
+      <property name = "javax.persistence.jdbc.user" value = "servlet" />
+      <property name = "javax.persistence.jdbc.password" value = "servlet" />
       <property name = "hibernate.show_sql" value = "true" />
       <property name = "hibernate.hbm2ddl.auto" value = "update" />
     </properties>
