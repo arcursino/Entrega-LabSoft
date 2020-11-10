@@ -25,15 +25,14 @@ public class CadastroDoenca extends HttpServlet{
         } catch (Exception e) {
             System.out.println("An exception was thrown");
             System.out.println(e.toString());
-        }
-        
+        }        
     }
 
     @Override
     public void doPost (HttpServletRequest req, HttpServletResponse res) throws ServletException{
         try {
             req.setCharacterEncoding("UTF-8");
-            Doenca doenca; 
+            Doenca doenca;
             try {
                 List<Doenca> doencas = new DoencaDAOImpl().findByCode(req.getParameter("id"));
                 if (doencas.isEmpty()) {
@@ -43,16 +42,19 @@ public class CadastroDoenca extends HttpServlet{
                 }
             } catch (Exception e) {
                 doenca = new Doenca();
-            }          
-            if ( !(req.getParameter("id") == null) && !req.getParameter("id").trim().equals("") ) {
-                doenca.setNome(req.getParameter("nome"));
-                doenca.setSintomas(req.getParameter("sintomas"));
+            }
+            if ( !(req.getParameter("id") == null)) {
+                String nomeDoenca = (String)req.getParameter("nome");
+                String sintomas = (String)req.getParameter("sintomas");
+                doenca.setNome(nomeDoenca);
+                doenca.setSintomas(sintomas);
+                
                 try {
                     Doenca updateDoenca = new DoencaDAOImpl().updateDoenca(doenca);
                 } catch (Exception e) {
                     Doenca saveDoenca = new DoencaDAOImpl().saveDoenca(doenca);
                 }
-                req.setAttribute("doencas", new DoencaDAOImpl().getDoencas());
+                req.setAttribute("doenca", doenca);
                 req.getRequestDispatcher("/static/dado_doenca.jsp").forward(req, res);
             } else {
                 String nomeDoenca = (String)req.getParameter("nome");
