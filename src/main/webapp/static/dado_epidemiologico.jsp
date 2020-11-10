@@ -1,26 +1,25 @@
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-<%@ page contentType = "text/html" pageEncoding = "UTF-8" %>
-<%@ page import = "java.util.*" %>
-<%@ page import = "server.model.epidemiologico.Epidemiologico" %>
-<html>
+<%@page import="java.util.List" %>
+<%@ page import = "model.epidemiologico.Epidemiologico" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+<html>    
     <head>
+        <link href="styles/epidemiologico.css" rel="stylesheet" type="text/css"></link>
         <meta charset = "UTF-8">
-        <title>Dados Epidemiológicas</title>
-        <link rel = "icon" type = "image/x-icon" href = "assets/save.ico">
-        <link rel = "stylesheet" href = "styles/style.css">
-        <link rel = "stylesheet" href = "styles/epidemiologico.css">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <link rel = "icon" type = "image/x-icon" href = "assets/favicon.png"></link>          
     </head>
     <body>
-        <h4 class = "is-center">Cadastro de Dados Epidemiológicos</h4>
         <div class = "container">
-            <div class = "hero is-full-screen">
-                <nav class = "tabs is-center">
-                    <a href = "primeiraEntrega">Home</a>
-                    <a href = "dadoEpidemiologico">Visualização dos dados Epidemiológicos</a>
-                    <a href = "visualizarDoenca">Visualizar Doença</a>
-                    <a href = "cadastroDoenca">Cadastro de dados da doença</a>
-                    <a href = "cadastroEpidemiologico"> Cadastro de dados epidemiológicos</a>
-                </nav>
+            <div class="sidebar">                
+                <a class="active" href = "home">Home</a>
+                <a href = "visualizarepidemiologico">Visualização dos dados Epidemiológicos</a>
+                <a href = "visualizardoenca">Visualizar Doença</a>
+                <a href = "cadastrodoenca">Cadastro de dados da doença</a>
+                <a href = "cadastroepidemiologico"> Cadastro de dados epidemiológicos</a>  
+            </div>
+            <div class="content">      
                 <div id = "epidemiologico">
                     <div class = "row">
                         <div class = "col">
@@ -29,14 +28,14 @@
                                     try {
                                         String option = (String) request.getAttribute("option");
                                         if (option.equals("criar")) {
-                                            out.print("Cadastrar novo dado Epidemiológico");
+                                            out.print("Cadastrar ocorrência de doença");
                                         }
                                     } catch (Exception e) {
-                                        out.print("Cadastrar novo dado Epidemiológico");
+                                        out.print("Cadastrar ocorrência de doença");
                                     }
                                 %>
                             </h3>
-                            <form action = "cadastro" method = "POST">
+                            <form action = "cadastroepidemiologico" method = "POST">
                                 <%
                                     Epidemiologico epidemiologico;
                                     try {
@@ -44,39 +43,37 @@
                                     } catch (Exception e) {
                                         epidemiologico = new Epidemiologico();
                                     }
-                                    if (epidemiologico.getId() == null || epidemiologico.getId().trim().equals("") ) {
-                                        out.print("Id: <input type = 'text' name = 'id'/><br>");
-                                        out.print("Data de Coleta: <input type = 'date' name = 'data'/><br>");
-                                        out.print("Doença Associada: <input type = 'text' name = 'doenca'/><br>");                                        
-                                    } else {
-                                        out.print("Id: <input type = 'text' name = 'id' value = '" + epidemiologico.getId() + "'/><br>");
-                                        out.print("Data de Coleta: <input type = 'date' name = 'data' value = '" + epidemiologico.getData() + "'/><br>");
-                                        out.print("Doença Associada: <input type = 'text' name = 'doenca' value = '" + epidemiologico.getDoenca() + "'/><br>");
-                                        
-                                    }
+                                    out.print("Data da ocorrência: <input type = 'text' name = 'data'/><br>");
+                                    out.print("Doença Associada: <input type = 'text' name = 'doencaAssociada'/><br>");                                        
                                 %>
+                                <div class="row">
                                 <%
                                     try {
                                         String option = (String) request.getAttribute("option");
                                         if (option.equals("criar")) {
-                                            out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/>");
-                                            out.print("<input type = 'submit' value = 'Cadastrar' style = 'align-items: center'/>");
+                                            out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/><br>");
+                                            out.print("<input type = 'submit' value = 'Cadastrar' style = 'align-items: center'/><br>");
+                                        }else if (option.equals("editar")) {
+                                            out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/><br>");
+                                            out.print("<input type = 'submit' value = 'Salvar' style = 'align-items: center'/><br>");
                                         }
                                     } catch (Exception e) {
-                                        out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/>");
-                                        out.print("<input type = 'submit' value = 'Cadastrar' style = 'align-items: center'/>");
+                                        out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/><br>");
+                                        out.print("<input type = 'submit' value = 'Cadastrar' style = 'align-items: center'/><br>");
                                     }
                                 %>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class = "is-text-center">
-            <p>
-                Sistema de Dado de Coletas e Visualização de dados epidemiológicos
-            </p>
-        </footer>
+        </div>
+        </div>  
+        <div class="footer">
+                Sistema de Coleta e Visualização de Dados Epidemiológicos</br>
+                Ariana Rodrigues Cursino</br>
+        </div>
     </body>
 </html>
