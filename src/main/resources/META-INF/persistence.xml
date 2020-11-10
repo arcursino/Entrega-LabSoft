@@ -7,7 +7,7 @@
     <description>Sistema de Dado de Coletas e Visualização de dados epidemiológicos</description>
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>model.doenca.Doenca</class>
-    <properties>
+    <properties>      
       <property name = "hibernate.dialect" value = "org.hibernate.dialect.MariaDB53Dialect" />
       <property name = "javax.persistence.jdbc.driver" value = "org.mariadb.jdbc.Driver" />
       <property name = "javax.persistence.jdbc.url" value = "jdbc:mysql://localhost:3306/sistema" />
@@ -15,6 +15,22 @@
       <property name = "javax.persistence.jdbc.password" value = "servlet" />
       <property name = "hibernate.show_sql" value = "true" />
       <property name = "hibernate.hbm2ddl.auto" value = "update" />
-    </properties>
+  </properties>    
+  </persistence-unit>
+
+  <persistence-unit name = "epidemiologico">
+    <description>Sistema de Dado de Coletas e Visualização de dados epidemiológicos</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>model.epidemiologico.Epidemiologico</class>
+    <properties>      
+      <property name = "hibernate.dialect" value = "org.hibernate.dialect.MariaDB53Dialect" />
+      <property name = "javax.persistence.jdbc.driver" value = "org.mariadb.jdbc.Driver" />
+      <property name = "javax.persistence.jdbc.url" value = "jdbc:mysql://localhost:3306/sistema" />
+      <property name = "javax.persistence.jdbc.user" value = "servlet" />
+      <property name = "javax.persistence.jdbc.password" value = "servlet" />
+      <property name = "hibernate.show_sql" value = "true" />
+      <property name = "hibernate.hbm2ddl.auto" value = "update" />
+  </properties>    
   </persistence-unit>
 </persistence>
+
