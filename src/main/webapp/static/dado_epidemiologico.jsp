@@ -43,16 +43,16 @@
                                     } catch (Exception e) {
                                         epidemiologico = new Epidemiologico();
                                     }
-                                    out.print("Data da ocorrência: <input type = 'text' name = 'data'/><br>");
-                                    out.print("Doença Associada: <input type = 'text' name = 'doencaAssociada'/><br>");                                        
+                                    out.print("<div class='field-wrapper'>Data da ocorrência: <input type = 'text' name = 'data'/></div>");
+                                    out.print("<div class='field-wrapper'></div>Doença Associada: <input type = 'text' name = 'doencaAssociada'/></div>");                                        
                                 %>
                                 <div class="row">
                                 <%
                                     try {
                                         String option = (String) request.getAttribute("option");
                                         if (option.equals("criar")) {
-                                            out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/><br>");
-                                            out.print("<input type = 'submit' value = 'Cadastrar' style = 'align-items: center'/><br>");
+                                            out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/>");
+                                            out.print("<input type = 'submit' value = 'Cadastrar' style = 'align-items: center'/>");
                                         }else if (option.equals("editar")) {
                                             out.print("<input type = 'reset' value = 'Cancelar' style = 'align-items: center'/><br>");
                                             out.print("<input type = 'submit' value = 'Salvar' style = 'align-items: center'/><br>");

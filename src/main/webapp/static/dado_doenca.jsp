@@ -43,8 +43,9 @@
                                     } catch (Exception e) {
                                         doenca = new Doenca();
                                     }
-                                    out.print("Nome: <input type = 'text' name = 'nome'/><br>");
-                                    out.print("Sintomas: <input type = 'text' name = 'sintomas'/><br>");                                        
+
+                                    out.print("<div class='field-wrapper'> Nome: <input type = 'text' name = 'nome'/></div>");
+                                    out.print("<div class='field-wrapper'> Sintomas: <input type = 'text' name = 'sintomas'/></div>");                                        
                                 %>
                                 <div class="row">
                                 <%

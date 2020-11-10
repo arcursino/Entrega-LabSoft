@@ -21,7 +21,29 @@
             </div>
             <div class="content">      
                 <form action = "home" method = "GET">
-                </form>                      
+                </form>  
+                <table>
+                    <tr>
+                      <th>Doença</th>
+                      <th>Sintomas</th>                      
+                    </tr>
+                    <tr>
+                      <td>Gripe</td>
+                      <td>Coriza</td>
+                    </tr>
+                    <tr>
+                      <td>Covid</td>
+                      <td>Falta de ar</td>
+                    </tr>
+                    <tr>
+                      <td>Sarampo</td>
+                      <td>Vermelhidão no corpo</td>
+                    </tr>
+                    <tr>
+                      <td>Sinusite</td>
+                      <td>Febre</td>
+                    </tr>                   
+                </table>                
             </div>
         </div>         
         <div class="footer">

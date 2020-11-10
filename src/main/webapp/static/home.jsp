@@ -22,9 +22,9 @@
             <div class="content">      
                 <form action = "home" method = "GET">
                 </form>   
-                <p>1 - Primeira Entrega da Disciplina</p>  
-                <p>2 - Nome da aluna: Ariana Rodrigues Cursino e RA: 1460481821008</p>      
-                <p>3 - Nome do professor: Fabrício Galende M. de Carvalho</p>           
+                <h2>1 - Primeira Entrega da Disciplina</h2>  
+                <h2>2 - Nome da aluna: Ariana Rodrigues Cursino e RA: 1460481821008</h2>      
+                <h2>3 - Nome do professor: Fabrício Galende M. de Carvalho</h2>           
             </div>
         </div>         
         <div class="footer">

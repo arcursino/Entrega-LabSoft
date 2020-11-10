@@ -31,15 +31,15 @@
                         <input type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container">Gripe
+                    <label class="container_check">Gripe
                         <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container">Sarampo
+                    <label class="container_check">Sarampo
                         <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container">H1N1
+                    <label class="container_check">H1N1
                         <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
