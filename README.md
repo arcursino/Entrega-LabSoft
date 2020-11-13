@@ -24,7 +24,7 @@ Professor da Disciplina - Fabrício Galende
 - mysql > SELECT User, Host FROM mysql.user;
 - flush privileges;
 
-iniciar > CMD > Entrega-LabSoft enter
+**iniciar > CMD > Entrega-LabSoft enter**
 
 ```
 gradle build
