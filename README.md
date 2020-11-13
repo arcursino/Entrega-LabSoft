@@ -14,6 +14,16 @@ Professor da Disciplina - Fabrício Galende
 
 ## Recomendações para o uso:
 
+**Conectar ao banco e executar o script para criar a base de dados** 
+- CREATE DATABASE sistema;
+
+**Conectar ao banco e executar o script para criar o usuário e dar acesso ao banco**
+
+- mysql > CREATE USER 'servlet' IDENTIFIED BY 'servlet';
+- mysql > GRANT ALL PRIVILEGES ON *.* TO 'servlet' IDENTIFIED BY 'servlet' WITH GRANT OPTION;
+- mysql > SELECT User, Host FROM mysql.user;
+- flush privileges;
+
 iniciar > CMD > Entrega-LabSoft enter
 
 ```
